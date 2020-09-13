@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/Raleway/static/Raleway-Black.ttf") format("ttf");
+}
+
+body {
+    font-family: Raleway;
+}
+
+#search-todo, #search-done-todo {
+    border: none;
+    border-bottom: 1px solid #7a7a7a;
+}
+
+.form-control:focus {
+    border: none;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.bg-seven-a {
+    background-color: #7a7a7a;
+}
+
+.todo-table {
+    overflow-y: auto;
+    height: 300px;
+}
+
+.todo-table thead th {
+    position: sticky;
+    top: 0;
+    background-color: #007BFF;
+}

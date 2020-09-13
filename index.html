@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>JS Todo-App</title>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="assets/css/font-awesome 4.7/css/font-awesome.min.css">
+
+		<!-- Custom CSS -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        
+        <!-- Fav Icon -->
+        <link rel="icon" href="assets/images/favicon.ico">
+</head>
+<body>
+	<main id="app">
+		<div class="container py-3">
+            <div class="row" id="todo-title">
+                <div class="col text-center">
+                    <h2>JS Todo-App</h2>
+                    <p>A Simple Todo Application with JavaScript</p>
+                </div>
+            </div>
+
+            <div class="row collapse" id="quote-container">
+                <div class="col-6 offset-3">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <h4 id="quote"></h4>
+                            <h5 id="author"></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <h4><i class="fa fa-times"></i> List of todos</h4>
+                        </div>
+
+                        <div class="col">
+                            <button type="button" class="btn btn-primary btn-sm col-12" data-toggle="modal" data-target="#addModal">
+                                <i class="fa fa-plus"></i> New
+                            </button>
+                            
+                            <div class="modal fade" id="addModal">
+                                <div class="modal-dialog">
+                                    <form action="#" id="addModalForm">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-secondary text-white">
+                                                <h5 class="modal-title"><i class="fa fa-info-circle"></i> New Todo Information</h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row py-2">
+                                                    <div class="col-12">
+                                                        <textarea name="add_title" id="add_title" rows="5" class="form-control"
+                                                            placeholder="Enter your todos content here..." required></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
+                                                    <i class="fa fa-times"></i> Cancel
+                                                </button>
+                                                <button type="submit" class="btn btn-primary btn-sm">
+                                                    <i class="fa fa-save"></i> Save Todo
+                                                </button>
+                                                <input type="reset" id="addFormReset" class="collapse">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-3">
+                        <div class="col text-center">
+                            <div class="mt-5 loading">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                                <br>
+                                Loading todos...
+                            </div>
+                            <div class="table-responsive todo-table collapse loading-done">
+                                <table class="table table-hover table-striped">
+                                    <thead class="bg-primary text-white">
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Todo</th>
+                                            <th>Date added</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="pending-todo-container" class="todo-container">
+                                        <!-- Todos will display here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <h4><i class="fa fa-check"></i> List of Done Todo</h4>
+                        </div>
+                    </div>
+                
+                    <div class="row mt-3">
+                        <div class="col text-center">
+                            <div class="mt-5 loading">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div><br>
+                                Loading todos...
+                            </div>
+                            <div class="table-responsive todo-table collapse loading-done">
+                                <table class="table table-hover table-striped">
+                                    <thead class="bg-primary text-white">
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Todo</th>
+                                            <th>Date Added</th>
+                                            <th>Date Finished</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="done-todo-container" class="todo-container">
+                                        <!-- Todos will display here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</main>
+
+	<script src="assets/js/jquery-3.5.1.min.js" defer></script>
+    <script src="assets/js/bootstrap/bootstrap.bundle.min.js" defer></script>
+	<script src="assets/js/moment.min.js" defer></script>
+	<script src="assets/js/sweetalert.min.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
